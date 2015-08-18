@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textState"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -24,7 +24,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textState"
+        android:layout_above="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:gravity="center_vertical"
         android:text="Temp"
@@ -37,8 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
         android:gravity="center_vertical"
         android:text="Temperature sensor"
         android:textColor="#FFFFFF"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/btnDisConn"
-        android:layout_toStartOf="@+id/btnRead"
+        android:layout_toStartOf="@+id/btnWrite"
         android:background="@drawable/layout_button"
         android:text="Connect"
         android:textColor="#FFFFFF"
@@ -62,21 +62,44 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="99dp"
-        android:layout_toEndOf="@+id/btnRead"
+        android:layout_toEndOf="@+id/btnWrite"
         android:background="@drawable/layout_button"
         android:text="Disconnect"
         android:textColor="#FFFFFF"
         android:textSize="5.5pt" />
 
     <Button
-        android:id="@+id/btnRead"
+        android:id="@+id/btnWrite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnDisConn"
+        android:layout_alignBaseline="@+id/btnDisConn"
+        android:layout_alignBottom="@+id/btnDisConn"
         android:layout_centerHorizontal="true"
         android:background="@drawable/layout_button"
         android:text="UPDATE"
         android:textColor="#FFFFFF"
         android:textSize="5.5pt" />
+
+    <Button
+        android:id="@+id/btnDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnDisConn"
+        android:layout_below="@+id/btnConn"
+        android:background="@drawable/layout_button"
+        android:text="notify Disable"
+        android:textColor="#FFFFFF"
+        android:textSize="4pt" />
+
+    <Button
+        android:id="@+id/btnEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnConn"
+        android:layout_toStartOf="@+id/btnWrite"
+        android:background="@drawable/layout_button"
+        android:text="notify enable"
+        android:textColor="#FFFFFF"
+        android:textSize="4pt" />
 
 </RelativeLayout>
